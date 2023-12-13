@@ -16,7 +16,7 @@
 <script>
    var clientId = "6579632af1ad7f0fffccf92b";
    var falgName = "testfeatureflag";
-   var user = {anonymous: true};
+   var user = { anonymous: true };
    var ldclient = window.LDClient.initialize(clientId, user);
 
    ldclient.on("ready", function() {
@@ -24,7 +24,8 @@
      "block":"none";
    });
 
-   ldclient.on("change":"+ flagname, function(newVal, prevVal) {
-     docuement.getElementById("preview").style.display = newVal ? "block":"none";
+   ldclient.on("change:" + flagname, function(newVal, prevVal) {
+     document.getElementById("preview").style.display = newVal ? "block":"none";
    });
+  
 </script>
