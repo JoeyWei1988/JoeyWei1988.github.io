@@ -2,7 +2,7 @@
 
 <h1>Test By Joey</h1>
 
-<div id="preview" style="display:none">
+<div id="featuretoggle" style="display:none">
   <p>
     This is for feature toggle testing to check when toggle on and off.
   </p>
@@ -15,12 +15,12 @@
    var ldclient = window.LDClient.initialize(clientId, user);
 
    ldclient.on("ready", function() {
-     document.getElementById("preview").style.display = ldclient.variation(flagName, false) ?
+     document.getElementById("featuretoggle").style.display = ldclient.variation(flagName, false) ?
      "block":"none";
    });
 
    ldclient.on("change:" + flagName, function(newVal, prevVal) {
-     document.getElementById("preview").style.display = newVal ? "block":"none";
+     document.getElementById("featuretoggle").style.display = newVal ? "block":"none";
    });
   
 </script>
