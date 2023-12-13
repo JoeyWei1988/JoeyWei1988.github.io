@@ -11,14 +11,14 @@
 <script>
    var clientId = "6579632af1ad7f0fffccf92b";
    var falgName = "testfeatureflag";
-   var Idclient = window.LDClient.initialize(clientId, user);
+   var ldclient = window.LDClient.initialize(clientId, user);
 
-   Idclient.on("ready", function() {
-     document.getElementById("preview").style.display = Idclient.variation(flagname, false) ?
+   ldclient.on("ready", function() {
+     document.getElementById("preview").style.display = ldclient.variation(flagname, false) ?
      "block":"none";
    });
 
-   Idclient.on("change":"+ flagname, function(newVal, prevVal) {
+   ldclient.on("change":"+ flagname, function(newVal, prevVal) {
      docuement.getElementById("preview").style.display = newVal ? "block":"none";
    });
 </script>
