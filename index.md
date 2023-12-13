@@ -11,6 +11,7 @@
 <script>
    var clientId = "6579632af1ad7f0fffccf92b";
    var falgName = "testfeatureflag";
+   var user = {anonymous: true};
    var ldclient = window.LDClient.initialize(clientId, user);
 
    ldclient.on("ready", function() {
