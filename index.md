@@ -1,15 +1,10 @@
 <script src="https://unpkg.com/launchdarkly-js-client-sdk@2.18.1/dist/ldclient.min.js"></script>
 
 <h1>Test By Joey</h1>
-<div id="test1" style="display:true">
-  <p>
-    this is for feature toggle testing_1.
-  </p>
-</div>
 
 <div id="preview" style="display:none">
   <p>
-    this is for feature toggle testing.
+    This is for feature toggle testing to check when toggle on and off.
   </p>
 </div>
 
