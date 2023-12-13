@@ -15,16 +15,16 @@
 
 <script>
    var clientId = "6579632af1ad7f0fffccf92b";
-   var falgName = "testfeatureflag";
+   var flagName = "testfeatureflag";
    var user = { anonymous: true };
    var ldclient = window.LDClient.initialize(clientId, user);
 
    ldclient.on("ready", function() {
-     document.getElementById("preview").style.display = ldclient.variation(flagname, false) ?
+     document.getElementById("preview").style.display = ldclient.variation(flagName, false) ?
      "block":"none";
    });
 
-   ldclient.on("change:" + flagname, function(newVal, prevVal) {
+   ldclient.on("change:" + flagName, function(newVal, prevVal) {
      document.getElementById("preview").style.display = newVal ? "block":"none";
    });
   
